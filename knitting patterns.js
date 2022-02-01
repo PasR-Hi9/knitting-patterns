@@ -1,17 +1,21 @@
-function getGage(){ //this function finds their stitches per cm in both vertical and horizontal planes
-  const widthGage = 0.1*(window.prompt('How many stitches across is 10cm in your gage?'))
-  const heightGage = 0.1*(window.prompt('How many stitches high is 10cm in your gage?'))
-}
+/*function getGage(){ //this function finds their stitches per cm in both vertical and horizontal planes
+  const widthGage = window.prompt('How many stitches across is 10cm in your gage?')
+  const heightGage = window.prompt('How many stitches high is 10cm in your gage?')
+} */
+
+const widthGage = (window.prompt('How many stitches across is 10cm in your gage?')/10)
+const heightGage = (window.prompt('How many stitches high is 10cm in your gage?')/10)
 
 function makeScarf(){ //this simplest pattern there is - just divides normal hat proportions by gage
-  getGage()
+ // getGage()
   let stitchesAcross = Math.ceil(widthGage*15.24)
   let rowNumber = Math.ceil(heightGage*167.64)
   console.log(`Cast on ${stitchesAcross} stitches. Knit every row for ${rowNumber} rows. Cast off.`)
 }
 
 function makeHat(){
-  getGage()
+ // getGage()
+  console.log(widthGage)
   let widthNeeded = window.prompt("What is the circumference of the head you're making a hat for in cm?")
   let heightNeeded = widthNeeded/2.5 //calculates based on average head width to height ratio
   let rowNumber = Math.ceil(heightGage*heightNeeded) //gives number of rows
