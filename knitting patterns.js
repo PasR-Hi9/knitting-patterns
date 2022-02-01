@@ -19,7 +19,8 @@ function makeHat(){
   let hatHeight = heightNeeded - bandWidth
   let stitchesAcross = Math.ceil(widthGage*0.1*widthNeeded)
   if (widthNeeded%2 == 0) {widthNeeded = widthNeeded + 1}
-  console.log(`Cast on ${stitchesAcross} in your preferred method. Knit in 1 by 1 ribbing with smaller needles for ${bandWidth}cm. Then knit in stockinette for ${hatHeight}cm.`)
+  let stitchesOff = Math.floor(stitchesAcross/4)
+  console.log(`Cast on ${stitchesAcross} in your preferred method. Knit in 1 by 1 ribbing with smaller needles for ${bandWidth}cm. Then knit in stockinette for ${hatHeight}cm. From then, shape top of hat by alternating rows of K1, K2tog and knitting in stockinette. Once you only have ${stitchesOff}, stitches remaining, cast off by pushing a threaded tapestry needle through the remaniing stitches and sldding them off the needle. Pull these tight and sew the two sides of the hat together. Ta da!`)
 }
  
 
